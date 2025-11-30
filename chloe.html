@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Q3-ACTIVITY 1: WEB PAGE</title>
+
+<style>
+
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: url("bg.png");
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+
+
+.heart {
+    position: fixed;
+    font-size: 25px;
+    animation: floatUp 8s linear infinite;
+    opacity: 0.8;
+}
+@keyframes floatUp {
+    0% { transform: translateY(100vh) scale(1); opacity: 1; }
+    100% { transform: translateY(-10vh) scale(1.4); opacity: 0; }
+}
+.heart:nth-child(1) { left: 10%; animation-duration: 7s; }
+.heart:nth-child(2) { left: 40%; animation-duration: 9s; }
+.heart:nth-child(3) { left: 70%; animation-duration: 6s; }
+
+
+.header {
+    width: 100%;
+    text-align: center;
+    padding: 30px 10px;
+    background: linear-gradient(135deg, #ffc8ec, #ffe89b);
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 4px 12px rgba(255, 166, 219, 0.6);
+    position: fixed;     
+    top: 0;
+    left: 0;
+    z-index: 1000;       
+}
+
+.header::after {
+    content: "✦";
+    font-size: 40px;
+    color: #fff6b8;
+    position: absolute;
+    right: 30px;
+    bottom: 12px;
+    opacity: 0.8;
+}
+
+.header::before {
+    content: "♡";
+    font-size: 40px;
+    color: #ffe0f4;
+    position: absolute;
+    left: 30px;
+    bottom: 12px;
+    opacity: 0.8;
+}
+
+.header-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #d9508e;
+    text-shadow: 0 0 5px #ffffff;
+    letter-spacing: 1px;
+}
+
+
+.form-container {
+    width: 390px;
+    background: rgba(255, 255, 255, 0.92);
+    margin: 150px auto 35px auto;  
+    padding: 25px;
+    border-radius: 30px;
+    border: 5px dashed #f8cce4;
+    box-shadow: 0 0 25px #ffe0f3;
+    position: relative;
+}
+
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-top: 18px;
+    color: #d95f9f;
+    font-size: 16px;
+}
+
+
+input[type="text"], select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ffc1e0;
+    background: #fff7fc;
+    border-radius: 12px;
+    margin-top: 5px;
+    font-size: 14px;
+}
+input:focus, select:focus {
+    outline: none;
+    border-color: #ff8ccc;
+    box-shadow: 0 0 8px #ffcae5;
+}
+
+
+.radio-group label {
+    font-weight: 500;
+    color: #c64f8f;
+    margin-right: 10px;
+}
+
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: #ff9ad8;
+    border: none;
+    border-radius: 18px;
+    color: white;
+    margin-top: 25px;
+    font-size: 17px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px #ffcdea;
+    transition: 0.3s;
+}
+button:hover {
+    background: #ff6fc7;
+    transform: translateY(-3px);
+}
+
+</style>
+</head>
+
+<body>
+
+
+<div class="heart">💖</div>
+<div class="heart">💗</div>
+<div class="heart">💕</div>
+
+
+<div class="header">
+    <div class="header-title">🌸 Survey on Most Played Online Games 🌼</div>
+</div>
+
+
+<div class="form-container">
+
+    
+
+    <label>💛 First Name</label>
+    <input type="text" placeholder="Enter your first name">
+
+    <label>💗 Last Name</label>
+    <input type="text" placeholder="Enter your last name">
+
+    <label>🌸 Nickname</label>
+    <input type="text" placeholder="Enter your nickname">
+
+    <label>👾 Username</label>
+    <input type="text" placeholder="Enter your username">
+
+    <label>🎀 Age</label>
+    <select>
+        <option>Select Age</option>
+        <option>10–12</option>
+        <option>13–15</option>
+        <option>16–18</option>
+        <option>19+</option>
+    </select>
+
+    <label>🧸 Sex</label>
+    <div class="radio-group">
+        <label><input type="radio" name="sex"> Male</label>
+        <label><input type="radio" name="sex"> Female</label>
+    </div>
+
+    <label>💕 Most Played Game</label>
+    <input type="text" placeholder="Enter your answer">
+
+    <label>✨ Education</label>
+    <select>
+        <option>Select Education</option>
+        <option>Elementary</option>
+        <option>High School</option>
+        <option>College</option>
+    </select>
+
+    <button>Submit</button>
+
+</div>
+
+</body>
+</html>
